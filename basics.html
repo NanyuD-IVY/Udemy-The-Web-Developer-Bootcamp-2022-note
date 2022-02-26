@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic html notes</title>
+    <link rel="stylesheet" href="myStyle.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="basic-css.html">css notes</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <h1>Basic html</h1>
+
+    <!-- comments ctrl+/ -->
+    <!-- auto-formatting: shift+alt+f -->
+    <h2>tags</h2>
+
+    <div>divider line
+        <hr>
+        <br>
+    </div>
+
+    <section>
+        for more tags: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">mdn web doc</a>
+
+        <div>Headings: &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt; They have meanings of hierachy, don't use them for
+            size,
+            have only one h1 per page</div>
+        <p> paragraph: &lt;p&gt; . This tag can ONLY contain inline elements like span, cannot be used like div</p>
+
+        Lorem + tab in vscode -> some random text
+        Lorem*5 + tab -> 5 lines of random text
+    </section>
+    <div> bullet list
+        <ul>
+            <li>nested list elem1
+                <ul>
+                    <li>list elem1</li>
+                    <li>list elem2</li>
+                </ul>
+            </li>
+            <li>list elem2</li>
+        </ul>
+    </div>
+    <div>ordered list
+        <ol>
+            <li>list elem1</li>
+            <li>list elem2</li>
+        </ol>
+    </div>
+
+    <div>
+        links:
+        <div>
+            <a href="test.html">test link to test.html</a>
+            <div>
+                This goes to the test.html in the same directory
+            </div>
+        </div>
+    </div>
+
+    <div>
+        images
+
+        <div>
+            local:
+            <img src="img_folder/img.jfif" alt="motivational meme" width="200px" height="200px">
+            link:
+            <img src="https://i2.wp.com/clmbmarketing.com/wp-content/uploads/2020/10/Dennis-Waitley-Winners-in-Life-Motivational-Quote.jpg?w=1080&ssl=1"
+                alt="i can" width="200px" height="200px">
+        </div>
+    </div>
+
+    <div>
+        inline vs block
+        <img src="img_folder/inline_vs_block.jpg" alt="note" width="400px" height="300px">
+        <div>span is inline. eg: <span class="testclass" style="color:red">test</span> color diff</div>
+    </div>
+
+    <div>
+        line break <br>
+        2nd line <br> 3rd line
+    </div>
+
+    <section>
+        semantic elements: header, footer, section, article, aside
+    </section>
+
+    <section>
+        <pre>
+            the pre tag preserves spaces and line breaks, text within will be displayed as written in the HTML source code. 
+            can be used with code tag to display code snippet.
+        </pre>
+    </section>
+
+    <section>
+        emmet for vscode: <a href="https://docs.emmet.io/abbreviations/syntax/">emmet documentation</a>
+    </section>
+
+    <table style=" border:solid">
+        <caption> test table</caption>
+
+        <!-- thead: table head, there might be a few rows of table head, so we wrap it in one tag -->
+        <thead>
+            <tr>
+                <!-- tr: table row -->
+                <!-- table head -->
+                <!-- rowspan: takes up x rows-->
+                <!-- colspan: takes up x cols-->
+                <th scope="col" rowspan="2">col head 1</th>
+                <th scope="col" colspan="2">col head 2</th>
+                <th scope="col" rowspan="2">col head 3</th>
+            </tr>
+
+            <tr>
+                <th scope="col">sub head 1</th>
+                <th scope="col">sub head 2</th>
+            </tr>
+        </thead>
+
+        <!-- table body -->
+        <tbody>
+            <tr>
+                <th scope="row"> row head 1</th>
+                <!-- table data -->
+                <td>data 1</td>
+                <td>data 2</td>
+                <td>data 3</td>
+            </tr>
+            <tr>
+                <th scope="row"> row head 2</th>
+                <td>data 4</td>
+                <td>data 5</td>
+                <td>data 6</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <section>
+        <h2>
+            form input
+        </h2>
+        <h3>
+            name attribute of input will indicate the name of the query. see code and comments for "password" for more
+            info
+        </h3>
+        <form action="/search-eg/" method="get">
+
+            <table>
+                <tbody>
+                    <tr>
+                        <th scope="row">text row</th>
+                        <td>
+                            <label for="text">text</label>
+                            <input type="text" id="text" placeholder="placeholder text">
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">number</th>
+                        <td>
+                            if step is applied and the user entered input does not match the step(eg, step is 3(starts
+                            from 0) when user enters 2), the form cannot be submitted
+                            <input type="number" placeholder="test" step="3" name="number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">password</th>
+                        <td>
+                            <input type="password" name="pw">
+                            submitting after altering password field will redirect to:
+                            file:///D:/search-eg/?pw=testpasswordinput, where "pw" is the name attribute of the input
+                            field <br>
+                            in a POST request, the form data will not show up in the url.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">datetime local</th>
+                        <td>
+                            <input type="datetime-local" name="datetime">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">image</th>
+                        <td>
+                            <!-- defines an image as the submit button -->
+                            <input type="image" name="image"
+                                src="https://st2.depositphotos.com/1853861/7026/v/950/depositphotos_70267803-stock-illustration-submit-button-icon.jpg"
+                                alt="Submit" width="48" height="48">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">box</th>
+                        <td>
+                            <!-- <label for="checkbox1">checkbox1 label</label>
+                            <input type="checkbox" id="checkbox1"> -->
+                            <!-- or: put input tag inside of label -->
+                            <div>
+                                label for="xxx" associates with the id of input, click on the text of "checkbox1 label"
+                                to see
+                            </div>
+                            <label for="checkbox1">
+                                checkbox1 label
+                                <input type="checkbox" id="checkbox1">
+                            </label>
+                        </td>
+                    </tr>
+                    <tr rowspan="2">
+                        <th>button</th>
+                        <td>
+                            <div>
+                                buttons' type are "submit" by default when inside of a form, but can be changed by
+                                applying type="button"
+                            </div>
+                            <button type="button"> submit </button>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <th>radio buttons</th>
+                        <td>
+                            using the same name associate them together <br>
+                            The 'required' attribute only needs to be applied to one of the radio inputs with the same
+                            name
+                            <input type="radio" name="radioB" value="radio1" required>
+                            <input type="radio" name="radioB" value="radio2">
+                            <input type="radio" name="radioB" value="radio3">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>select</th>
+                        <td>
+                            <label for="difficulty"> select difficulty</label>
+                            <select name="difficulty-name" id="difficulty">
+                                <option value="easy">easy</option>
+                                <option value="" selected>--please select an option</option>
+                                <option value="normal">normal</option>
+                                <option value="hard">hard</option>
+                                <option value="nightmare">nightmare</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>textarea</th>
+                        <td><textarea name="comments" id="comments" cols="30" rows="10" minlength="5"
+                                maxlength="10"></textarea></td>
+                    </tr>
+                    <tr>
+                        <th>more</th>
+                        <td>datetime-local, color, email, file, hidden, number, range, resettel, url,month, etc</td>
+                    </tr>
+                    <tr>
+                        <th>submit typed input</th>
+                        <td>
+                            <input type="submit" name="submit-typed-input" value="click me!">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>test</th>
+                        <td>
+                            <label for="tstselect">
+                                <select name="select" id="tstselect">
+                                    <option value="op1">op1</option>
+                                    <option value="op2">op2</option>
+                                    <option value="op3">op3</option>
+                                </select>
+                            </label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </form>
+
+
+
+
+        <h2>form that searches in reddit</h2>
+        <form action="https://www.reddit.com/search/" method="get">
+            <label for="searchReddit">
+                <!-- "name" q matches reddit's query name -->
+                <input type="text" name="q" id="searchReddit">
+            </label>
+
+            <input type="submit">
+        </form>
+    </section>
+
+</body>
+
+
+
+</html>

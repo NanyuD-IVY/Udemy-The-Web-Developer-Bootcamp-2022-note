@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic css notes</title>
+    <link rel="stylesheet" href="myStyle.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>CSS notes</h1>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="basics.html">basic html notes</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <section>
+        <h2>css selectors</h2>
+        <hr>
+        <div>
+            <h3>
+                tags:
+            </h3>
+            <pre>
+            h2 {
+                color:red;
+            }                
+            </pre>
+
+        </div>
+
+        <div>
+
+            <h3>
+                id:
+            </h3>
+            <pre>
+            #test-id {
+
+            }                
+            </pre>
+
+        </div>
+
+        <div>
+
+            <h3>
+                class:
+            </h3>
+            .class-name { }
+        </div>
+
+        <div>
+
+            <h3>
+                universal selector: selects everything.
+            </h3>
+            <pre>
+                * {
+                    color: pink;
+                }            
+            </pre>
+
+        </div>
+
+        <div>
+            <h3>
+                selector list: eg, select all h1's and h2's.
+            </h3>
+
+            <pre>
+            h1,h2 {
+                color: magneta
+            }
+            </pre>
+
+        </div>
+
+        <div>
+            <h3>
+                desendant selector: eg, select all &lt;li&gt; in &lt;div&gt;</h3>
+        </div>
+        <pre>
+            div li {
+                color: red;
+            } 
+        </pre>
+
+
+        </div>
+
+        <div>
+            <h3>adjacent selector: eg, select all &lt;p&gt; that are after an &lt;h1&gt;</h3>
+            <pre>
+                h1 + p {
+                    color:red;
+                }                
+            </pre>
+
+        </div>
+
+        <div>
+            <h3>direct child selector: eg, select all direct child that are &lt;a&gt;(not nested inside other child
+                tags)
+                inside &lt;footer&gt;</h3>
+
+            <pre>
+                footer > a {
+                    color: blue;
+                }
+            </pre>
+
+        </div>
+
+        <div>
+            <h3>attribute selector: eg, select all inputs with the type of password</h3>
+            <pre>
+                input[type="password"] {
+                    color:green;
+                }
+            </pre>
+
+
+            <h3>other example: eg, select all sections with the class="class1"</h3>
+
+            <pre>
+            section[class="class1"] {
+                
+            }
+            </pre>
+
+            <h3>More attribute selectors: <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">MDN
+                    web docs</a></h3>
+
+        </div>
+
+        <div class="pseudo-classes">
+            <h3>Psuedo classes: keywords added to a selector that specifies a special state of the selected element(s)
+            </h3>
+            <ul>
+                <li>:active (eg: when buttons are clicked)/li>
+                <li>:checked (eg: when radio buttons or checkbox are checked)</li>
+                <li>:first</li>
+                <li>:first-child</li>
+                <li class="hover">:hover</li>
+                <li>:not()</li>
+                <li>:nth-child()</li>
+                <li>:nth-of-type() (eg: :nth-of-type(3) is the third element of this class/tag, etc, :nth-of-type(3n)
+                    repeats every 3 elements)</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Psuedo elements: keyword added to a selector that lets you style a particular part of selected
+                element(s)
+
+            </h3>
+            <ul>
+                <li>::after</li>
+                <li>::before (add an element(inline by default) before the selected tag, eg: adds a heart before links
+                    a::before {
+                    content: "♥";
+                    })</li>
+                <li>::first-letter (eg, select the first letter of every h2 on the page) h2::first-letter {color:red;}
+                </li>
+                <li>::first-line</li>
+                <li>::selection (when selected with a mouse, change style. try it on texts on this page! works on DIRECT
+                    descendance ONLY), *::selection {} selects everything on page</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>The !important rule</h3>
+            <div>overrides all other styles, including inline styles</div>
+            <div>for more info: <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity#:~:text=How%20!important%20can%20be%20used%3A">more
+                    info on !important</a></div>
+        </div>
+    </section>
+    <section>
+        <h2>Color</h2>
+        <hr>
+        <div>
+            color: red >>> color of text <br>
+            background-color: red >>> color of background
+        </div>
+
+        <div>
+            <h3>rgba</h3>
+            /* red green blue alpha(transparency)*/
+            background-color: rgba(0, 209, 112, 0.5)
+        </div>
+
+        <div>
+            <h3>opacity</h3>
+            <div>opacity sets the transparency of the <span class="bold">element and all its children</span></div>
+            <div class="opacity">
+                <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi beatae sunt neque dolorum itaque
+                    amet corporis explicabo natus, id atque corrupti vitae ea ex autem placeat molestiae ipsa similique
+                    quod?
+                    Facere facilis beatae accusantium neque! Praesentium sequi repellendus laudantium animi illum sed
+                    temporibus, laboriosam harum dolores corporis in, autem aut voluptas impedit voluptatem sapiente
+                    accusamus odio? Sit non voluptatum deserunt?
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>CSS Text properties</h2>
+        <hr>
+        <div>
+            <ul>
+                <li>text-align</li>
+                <li>font-weight</li>
+                <li>text-decoration</li>
+                <li>line-height: does not only apply to text, applies to block contents as well. Block contents can be
+                    treated as "lines" under line height</li>
+                <li>letter-spacing</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="inline-blocks">
+        <h2>CSS sizes</h2>
+        <div class="inline-blocks">
+
+            <h3>Relative</h3>
+            <!-- <ul>
+                <li>em</li>
+                <li>rem</li>
+                <li>vh</li>
+                <li>vw</li>
+                <li>%</li>
+            </ul> -->
+
+            <section>
+                <h4>Percentage %</h4>
+                <div>
+                    <img src="img_folder/percentage.png" alt="img">
+                    <div>
+                        For width and height: % means the percentage of parent's width/height <br>
+                        For line-height property, it relates to the font-size of the element, not the parent
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h4>
+                    em
+                </h4>
+                <div>
+                    <img src="img_folder/em.png" alt="em">
+                    <div>
+                        同图上。for font-size, if parent has a font-size property specifed/by default, it changes with the
+                        parent's font-size. <br>
+                        for non-font-size properties: em is very useful for responsive designs. For example:
+                        <div class="em-div">
+                            <button class="em-btt">Good button</button>
+                            <button class="bad-btt">Baad button</button>
+                        </div>
+                        Try changing the parent's font-size to see the change in the buttons. You will notice that the
+                        roundness of the border of the good button stayed consistent, and the padding and margin changes
+                        along with the font-size as well. <br>
+                        In comparison, the baad button, with units of padding, etc set as px was not as good!
+                    </div>
+                    <div>
+                        Problems with em: when style is nested, the size got multiplied.(2em > 2em =>4em!)
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h4>rem: root ems</h4>
+                <img src="img_folder/rem.png" alt="rem">
+                <div>
+                    rem is em but based on the root element, the html element.
+                </div>
+            </section>
+
+            <section>
+                <h4>ch(character width)</h4>
+                <div>
+                    ch(character width) is relative to the width of the "0". limits the length of text mostly
+                </div>
+            </section>
+        </div>
+
+        <div class="inline-blocks">
+
+            <h3>Absolute</h3>
+            <ul>
+                <li>px (pixel)</li>
+                <li>pt</li>
+                <li>cm</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section>
+        <h2>Font family</h2>
+        <div>
+            font-family: font1, font2; <br>
+            font2 is the backup font for font1, when font1 is unavaliable on a machine, font2 is displayed
+        </div>
+        <div>
+            <h3>Google font:</h3>
+            <div>
+                How to use: <br>
+                click on font -> +select style -> view your selected family(top-right corner)
+                <a href="https://fonts.google.com/">link here</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>The CSS box model</h2>
+        <div>
+            <figure>
+                <img src="img_folder/css_box.jpg" alt="css box">
+                <figcaption>css content box layout</figcaption>
+            </figure>
+        </div>
+
+        <section>
+            <h3>width&height</h3>
+            <pre>
+                div {
+                    width: 200px;
+                    height:200px;
+                }
+            </pre>
+        </section>
+
+        <section>
+            <h3>border</h3>
+            <pre>
+                General border properties:
+                //     width | style |color
+                border: medium dash green 
+                etc...
+            </pre>
+            <div>
+                border-width: controls thickness <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-width">(More info)</a>
+                <pre>
+                    border-width: thick;
+                    border-width: 11em;
+                    border-width: 4px 1.25em;
+                </pre>
+            </div>
+
+            <div>
+                border-color: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-color">(more info)</a>
+                <pre>
+                    border-top-color 
+                </pre>
+            </div>
+
+            <div>
+                border-style: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style">(more info)</a>
+                <pre>
+                    border-style: dashed;
+                </pre>
+            </div>
+
+            <div>
+                border-radius: make border more round <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius">(more info)</a>
+
+            </div>
+        </section>
+
+        <section>
+            <h3>Padding: spacing on the inside of border</h3>
+            <div>
+                <pre>
+                    padding: 10px /*for all four sides*/
+                    padding: 5px 10px /*vertical | horizontal*/
+                    padding: 1px 2px 2px /*top | horizontal | bottom*/
+                    padding: 5px 1px 0 2px; /*top | right | bottom | left*/
+                </pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>Margin: spacing between this element and other elements <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin">(more info)</a></h3>
+            <pre>
+                margin:auto
+                margin: 1em;
+                margin-top: 1em;
+                margin-bottom: 0; 
+            </pre>
+            <h4><code>margin:auto</code>can put element in the middle(horizontally</h4>
+        </section>
+    </section>
+
+    <section>
+        <h2>The display property</h2>
+        <img src="img_folder/css_display.png" alt="display">
+        <section>
+            <h3>Inline</h3>
+            <div>
+                <pre>
+                    display: inline;
+                </pre>
+                Makes this element an inline element. Their width and height will become auto. However, it might still
+                NOT be able to fit in a line with other elements as <span class="bold">its parent/child might be
+                    block!</span> <br>
+                display:inherit can be utilized in this situation <br>
+                The image above states that "width and height are ignored" for inline element. From my understanding:
+                manually styled width are height properties are ignored, width and height depends on the content
+                only.(needs verification) <br>
+                And for margin & padding of inline element, they only push other elements horizontally but not
+                vertically. for example:
+
+                <figure>
+                    <img src="img_folder/inline_padding_margin.png" alt="inline">
+                    <figcaption>both padding and margin for all sides are implemented, but only the horizontal side
+                        affect other elements.</figcaption>
+                </figure>
+
+            </div>
+        </section>
+
+        <section>
+            <h3>block</h3>
+            <div>
+                <pre>
+                    display: block;
+                </pre>
+                Block element takes up a whole line! Note that "a whole line" is<span class="bold"> relative to the
+                    parent</span>, NOT the window
+            </div>
+        </section>
+
+        <section>
+            <h3>inline-block</h3>
+            width, height, margin, padding are respected, but does not forcibly takes up a whole line as block elements.
+        </section>
+    </section>
+
+
+    <section>
+        <h2>Position</h2>
+        <div class="half">
+            <section>
+                <h3>
+                    Static
+                </h3>
+                <div class="text">
+                    The element is positioned according to the normal flow of the document. The <span
+                        class="italic">top, right, bottom, left, and z-index properties</span> have <span
+                        class="bold">no effect</span> . This is the default value.
+                </div>
+            </section>
+            <section>
+                <h3>
+                    Relative
+                </h3>
+                <div class="text">
+                    The element is positioned according to the normal flow of the document, and then offset relative to
+                    itself based on the values of top, right, bottom, and left. The offset does not affect the position
+                    of any other elements; thus, the space given for the element in the page layout is the same as if
+                    position were static.
+                    <br>
+                    This value creates a new stacking context when the value of z-index is not auto. Its effect on
+                    table-*-group, table-row, table-column, table-cell, and table-caption elements is undefined.
+                </div>
+            </section>
+            <section>
+                <h3>
+                    Absolute
+                </h3>
+                <div class="text">
+                    The element is removed from the normal document flow, and no space is created for the element in the
+                    page layout. It is positioned relative to its closest positioned ancestor, if any; otherwise, it is
+                    placed relative to the initial <a href="/en-US/docs/Web/CSS/Containing_block">containing block</a>.
+                    Its final position is determined by the values of <code>top</code>, <code>right</code>,
+                    <code>bottom</code>, and <code>left</code>.
+                </div>
+            </section>
+            <section>
+                <h3>
+                    Fixed
+                </h3>
+                <div class="text">
+                    The element is removed from the normal document flow, and no space is created for the element in the
+                    page layout. It is positioned relative to the initial <a
+                        href="/en-US/docs/Web/CSS/Containing_block">containing block</a> established by the <a
+                        href="/en-US/docs/Glossary/Viewport">viewport</a>, except when one of its ancestors has a
+                    <code>transform</code>, <code>perspective</code>, or <code>filter</code> property set to something
+                    other than <code>none</code> (see the <a
+                        href="https://www.w3.org/TR/css-transforms-1/#propdef-transform" class="external"
+                        rel=" noopener">CSS Transforms Spec</a>), in which case that ancestor behaves as the containing
+                    block. (Note that there are browser inconsistencies with <code>perspective</code> and
+                    <code>filter</code> contributing to containing block formation.) Its final position is determined by
+                    the values of <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>.
+                    <br>
+                    The sample fixed block is assigned display:none since it blocks other contents. Can be viewed by
+                    removing this property in inspect.
+                </div>
+            </section>
+            <section>
+                <h3>
+                    Sticky
+                </h3>
+
+            </section>
+        </div>
+
+        <div class="half">
+            <section id="static">
+                <div class="fst"></div>
+                <div class="snd"></div>
+                <div class="trd"></div>
+            </section>
+
+            <section id="relative">
+                <div class="fst"></div>
+                <div class="snd"></div>
+                <div class="trd"></div>
+            </section>
+
+            <section id="absolute">
+                <div class="fst"></div>
+                <div class="snd"></div>
+                <div class="trd"></div>
+            </section>
+
+            <section id="fixed">
+                <div class="fst"></div>
+                <div class="snd"></div>
+                <div class="trd"></div>
+            </section>
+
+            <section id="sticky">
+                <div class="fst"></div>
+                <div class="snd"></div>
+                <div class="trd"></div>
+            </section>
+        </div>
+
+    </section>
+
+    <section>
+        <h2>Transition</h2>
+        <div class="light-border">
+            <p>adding <code>transition: 1s</code> to the element makes <span class="bold">all transitions of this
+                    element last 3 second</span> </p>
+            <div class="circle">hover!</div>
+            <p>Some other cool demo(If u want this effect, better use transform!):</p>
+            <div class="square-parent">
+                <div class="cool-square">hover!</div>
+            </div>
+        </div>
+
+        <div class="light-border">
+            <p>The transition can be seperated by properties, for example: <code>transition: background-color 3s</code>
+            </p>
+            <div class="circle bcg">hover!</div>
+            <p>Now only the background-color will take 3s to transit, not the shape.</p>
+            <p>Multiple transition properties can be specified together. eg:
+                <code>transition: background-color 3s, border-radius 1s;</code> </p>
+        </div>
+
+        <div class="light-border">
+            <p>A delay can also be set. <code>transition: 3s 1.5s;</code> sets a 1.5s delay to the transition</p>
+            <div class="circle delay">hover! and wait</div>
+        </div>
+
+        <div class="light-border">
+            <p>transition-timing-function: kinda like powerpoint transition effects. check out <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function">MDN blog</a></p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Transform</h2>
+        <p><code> Transform-origin</code> changes the point the element is, eg, rotating around. Eg:
+            <code>transform-origin: bottom right;</code></p>
+        <div class="transf">
+            <div>transform: rotate(45deg) <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function#:~:text=z%3D0%20plane.-,Rotation,-rotate()">For
+                    more rotateX,Y,Z</a></div>
+            <div>transform: scale(2, 0.8) <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function#:~:text=Scaling%20(resizing),the%20z%2Daxis.">For
+                    more scale3D, X, etc</a></div>
+            <div>transform: translateY(50px) <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function#:~:text=Translation%20(moving),the%20z%2Daxis.">For
+                    more translate</a></div>
+            <div>transform: skew(30deg) <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skew()">For more skew
+                    explanation:</a></div>
+            <div>transform: skew(50deg) translateY(100px)</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Background image</h2>
+        <section>
+            <h3>Basics:</h3>
+            <div class="bcg-img">
+                <div>
+                    background-img: url("path") <br> Width and height specified as vw and vh. Notice that the image is
+                    cropped according to the size specified.
+                </div>
+            </div>
+
+            <div class="bcg-img bcg-cover">
+                <div>
+                    background-size:cover
+                </div>
+            </div>
+
+            <div class="bcg-img bcg-contain">
+                <div>
+                    background-size:contain
+                </div>
+            </div>
+
+            <div>
+                More info:
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size">more
+                            background-size</a></li>
+                    <li><a
+                            href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat">background-repeat</a>
+                    </li>
+                    <li><a
+                            href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-position">background-position</a>
+                    </li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background">background property in
+                            general. Note that it is possible to have several backgrounds.</a></li>
+                </ul>
+
+
+            </div>
+        </section>
+    </section>
+
+    <section>
+        <h2>Flexbox</h2>
+        <p>
+            Flexbox is turned on by setting display:flex
+        </p>
+
+        <div>
+            <h3>flex-direction</h3>
+            <div class="flex-d">
+                <div style="flex-direction: row;" class="light-border">
+                    flex-direction: row;
+                    <div class="flex1">1</div>
+                    <div class="flex2">2</div>
+                    <div class="flex3">3</div>
+                </div>
+                <div style="flex-direction: row-reverse;" class="light-border">
+                    flex-direction: row-reverse
+                    <div class="flex1">1</div>
+                    <div class="flex2">2</div>
+                    <div class="flex3">3</div>
+                </div>
+                <div style="flex-direction: column;" class="light-border">
+                    flex-direction: column;
+                    <div class="flex1">1</div>
+                    <div class="flex2">2</div>
+                    <div class="flex3">3</div>
+                </div>
+                <div style="flex-direction: column-reverse;" class="light-border">
+                    flex-direction: column-reverse;
+                    <div class="flex1">1</div>
+                    <div class="flex2">2</div>
+                    <div class="flex3">3</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>The CSS cascade</h2>
+        <div>
+            selectors that come later overrides selectors that comes before
+            <div>eg:
+                <pre>
+                    .color-contest {
+                        color: red;
+                    }
+
+                    .color-contest {
+                        color:purple;
+                    }
+                </pre>
+                <div class="color-contest">
+                    Purple wins.
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>CSS inheritance</h2>
+        <div>
+            some child elements inherit their parents' styles <br>
+            But some elements(eg, button, input) does not inherit by default. This can be changed by setting the style
+            to "inherit."
+            <pre>
+                form {
+                    color: green;
+                }
+
+                button, input {
+                    color: inherit;
+                }
+            </pre>
+            Now buttons and inputs inside of a form element will inherit the color:green property.
+            <br> <br>
+            Some properties are NOT inheritable. eg, border. Look on MDN docs for specific properties.
+        </div>
+    </section>
+
+    <section>
+        <h2>Chrome front-end dev tools</h2>
+        <div>
+            <div>
+                <h3>Specificity: which style will be used where there's a conflict</h2>
+                    <div>
+                        The more specific a selector is, the styles it specified win
+                        <div>General formula: id > class > element</div>
+                        <figure>
+                            <img src="img_folder/Specificity.png" alt="specificity">
+                            <figcaption>The crossed out style in inspector is <span class="bold">style that could be
+                                    applied, but lost to another style in speficity</span></figcaption>
+                        </figure>
+
+                    </div>
+            </div>
+
+            <div>
+                <h3>Testing with styles and classes in the browser</h3>
+                <div>
+                    <figure>
+                        <img src="img_folder/chrome_dev_tool_class.png" alt="chrome class">
+                        <figcaption>select an element, then inspect -> styles -> .cls, a new class can be added to the
+                            element</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="img_folder/chrome_dev_tool_force_state.png" alt="force state">
+                        <figcaption>force states on a element to see the style more clearly, etc</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

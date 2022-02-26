@@ -1,0 +1,276 @@
+body {
+    background-color: rgba(255, 253, 246, 0.959);
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    width: 70%;
+}
+
+div::selection {
+    background-color: hotpink;
+}
+
+/* *::selection {
+    background-color: hotpink;    
+} */
+
+h1 {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.inline-blocks {
+    display: inline;
+}
+
+h2 {
+    text-decoration: underline wavy #bbee9e;
+    color: rgb(41, 97, 170);
+    background-color: rgb(125, 208, 211);
+    letter-spacing: normal;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h3 {
+    /* font-weight: 200; */
+}
+
+p {
+    line-height: 2;
+}
+
+div .hover:hover {
+    color: red;
+}
+
+.pseudo-classes li:nth-of-type(2n){
+    background-color: rgb(202, 202, 202);
+}
+
+/* Add a heart before links */
+a::before {
+    content: "♥";
+}
+
+/* css cascade test */
+.color-contest {
+    color: red;
+}
+
+.color-contest {
+    color:purple;
+}
+
+.em-div {
+    font-size: 20px;
+}
+
+.em-btt {
+    font-size: 1em;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+.bad-btt {
+    font-size: 1em;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.opacity {
+    /* color: white; */
+    opacity: 0.3;
+    width: 50%;
+    background-color: blueviolet;
+    border: black solid 2px;
+
+}
+
+.text {
+    max-width: 80ch;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.half{
+    display: inline-block;
+}
+
+.half section {
+    height: 20ch;
+    position: relative;
+}
+
+.fst, .snd, .trd {
+    height: 60px;
+    width: 60px;
+    background-color: #bbee9e;
+    display: inline-block;
+}
+
+.snd {
+    background-color: yellow;
+}
+
+#relative .snd {
+    position: relative;
+    top: 30px;
+    left: 40px;
+}
+
+#absolute .snd {
+    position: absolute;
+    top:20px;
+    left: 20px;
+}
+
+#fixed .snd {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+#sticky .snd {
+    position: sticky;
+    top:20px;
+}
+
+.circle {
+    margin: auto;
+    font-size: small;
+    text-align: center;
+    background-color: aquamarine;
+    width: 50px;
+    height: 50px;
+    transition: 3s;
+}
+
+.circle:hover {
+    background-color: blueviolet;
+    border-radius: 50%;
+}
+
+.bcg {
+    transition: background-color 3s;
+}
+
+.light-border {
+    border: 1px rgb(117, 117, 117) solid;
+    margin: 2%;
+}
+
+.delay {
+    transition: 3s 1.5s;
+}
+
+code {
+    background-color: rgb(231, 229, 229);
+}
+
+.cool-square {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(144, 144, 253);
+    transition: margin-left 3s;
+}
+
+.square-parent:hover div{
+    margin-left: 300px;
+}
+
+.transf > div {
+    vertical-align: middle;
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    background-color: #8988e6;
+    margin: 2%;
+    padding: 0px;
+}
+
+.transf:hover > div:nth-of-type(1) {
+    transform: rotate(45deg);
+}
+
+.transf:hover > div:nth-of-type(2) {
+    transform: scale(2, 0.8);
+}
+
+.transf:hover > div:nth-of-type(3) {
+    transform: translateY(50px);
+}
+
+.transf:hover > div:nth-of-type(4) {
+    transform: skew(30deg);
+}
+
+.transf:hover > div:nth-of-type(5) {
+    transform: skew(50deg) translateY(50px);
+}
+
+.bcg-img {
+    display: inline-block;
+    text-align: center;
+    color: aliceblue;
+    font-size: x-large;
+    background-image: url(img_folder/sample-bcg.jpg);
+    width: 30vw;
+    height: 50vh;
+    line-height: 50vh;
+    border: 1.5px black solid;
+}
+
+.bcg-img div {
+    background-color: rgba(39, 39, 39, 0.25);
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.bcg-cover {
+    background-size: cover;
+}
+
+.bcg-contain {
+    background-size: contain;
+}
+
+.flex-d {
+    display: flex;
+}
+
+.flex-d > div{
+    width: 25%;
+    height: 25%;
+    display: flex;
+}
+
+.flex1 {
+    text-align: center;
+    /* margin: 0 auto; */
+    width: 50px;
+    height: 50px;
+    background-color: #a9a8f1;
+}
+
+.flex2 {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(214, 231, 187);
+}
+
+.flex3 {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(252, 206, 145);
+}
