@@ -1,5 +1,11 @@
 body {
     background-color: rgba(255, 253, 246, 0.959);
+    width: 100%;
+    margin: 0;
+}
+
+.content {
+
     font-family: 'Roboto', sans-serif;
     margin: 0 auto;
     width: 70%;
@@ -7,6 +13,27 @@ body {
 
 div::selection {
     background-color: hotpink;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    padding: 1em 0;
+    margin: 0px;
+    border-color: grey;
+    border-style: solid;
+    border-width: 1px 0px;
+    background-color: rgb(215, 250, 244);
+    z-index: 99;
+}
+
+@media (max-width: 576px){
+    nav {
+        flex-direction: column;
+    }
 }
 
 /* *::selection {
@@ -104,6 +131,7 @@ a::before {
 
 .half section {
     height: 20ch;
+    margin: 5ch 0;
     position: relative;
 }
 
@@ -215,6 +243,14 @@ code {
     transform: skew(50deg) translateY(50px);
 }
 
+img {
+    max-width: 100%;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
 .bcg-img {
     display: inline-block;
     text-align: center;
@@ -244,12 +280,14 @@ code {
 }
 
 .flex-d {
-    display: flex;
+    width: 20vw;
+    height: 160px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .flex-d > div{
-    width: 25%;
-    height: 25%;
+    height: 120px;
     display: flex;
 }
 
@@ -273,4 +311,21 @@ code {
     width: 50px;
     height: 50px;
     background-color: rgb(252, 206, 145);
+}
+
+.flex-basis .flex1 ,.flex-basis .flex2 ,.flex-basis .flex3 {
+    flex-basis: 200px;
+}
+
+@media (max-width: 800px) {
+    #media-example {
+        color: red;
+    }
+}
+
+#media-example {
+    width: auto;
+    height: auto;
+    padding: 2em;
+    display: inline-block;
 }

@@ -14,16 +14,14 @@
 </head>
 
 <body>
-    <h1>CSS notes</h1>
-
     <nav>
-        <ul>
-            <li>
-                <a href="basics.html">basic html notes</a>
-            </li>
-        </ul>
-
+        <span>Content table</span>
+        <span><a href="basics.html">basic html notes</a></span>
+        <span>right nav elem</span>
     </nav>
+
+<div class="content">
+    <h1>CSS notes</h1>
 
     <section>
         <h2>css selectors</h2>
@@ -33,9 +31,9 @@
                 tags:
             </h3>
             <pre>
-            h2 {
-                color:red;
-            }                
+h2 {
+    color:red;
+}                
             </pre>
 
         </div>
@@ -46,9 +44,9 @@
                 id:
             </h3>
             <pre>
-            #test-id {
+#test-id {
 
-            }                
+}                
             </pre>
 
         </div>
@@ -67,9 +65,9 @@
                 universal selector: selects everything.
             </h3>
             <pre>
-                * {
-                    color: pink;
-                }            
+* {
+    color: pink;
+}            
             </pre>
 
         </div>
@@ -80,9 +78,9 @@
             </h3>
 
             <pre>
-            h1,h2 {
-                color: magneta
-            }
+h1,h2 {
+    color: magneta
+}
             </pre>
 
         </div>
@@ -92,20 +90,18 @@
                 desendant selector: eg, select all &lt;li&gt; in &lt;div&gt;</h3>
         </div>
         <pre>
-            div li {
-                color: red;
-            } 
+div li {
+    color: red;
+} 
         </pre>
 
-
-        </div>
 
         <div>
             <h3>adjacent selector: eg, select all &lt;p&gt; that are after an &lt;h1&gt;</h3>
             <pre>
-                h1 + p {
-                    color:red;
-                }                
+h1 + p {
+    color:red;
+}                
             </pre>
 
         </div>
@@ -116,9 +112,9 @@
                 inside &lt;footer&gt;</h3>
 
             <pre>
-                footer > a {
-                    color: blue;
-                }
+footer > a {
+    color: blue;
+}
             </pre>
 
         </div>
@@ -126,18 +122,18 @@
         <div>
             <h3>attribute selector: eg, select all inputs with the type of password</h3>
             <pre>
-                input[type="password"] {
-                    color:green;
-                }
+input[type="password"] {
+    color:green;
+}
             </pre>
 
 
             <h3>other example: eg, select all sections with the class="class1"</h3>
 
             <pre>
-            section[class="class1"] {
-                
-            }
+section[class="class1"] {
+
+}
             </pre>
 
             <h3>More attribute selectors: <a
@@ -254,7 +250,7 @@
                     <img src="img_folder/percentage.png" alt="img">
                     <div>
                         For width and height: % means the percentage of parent's width/height <br>
-                        For line-height property, it relates to the font-size of the element, not the parent
+                        For line-height property, it relates to the font-size of the element, not the parent <br>
                     </div>
                 </div>
             </section>
@@ -340,42 +336,42 @@
         <section>
             <h3>width&height</h3>
             <pre>
-                div {
-                    width: 200px;
-                    height:200px;
-                }
+div {
+    width: 200px;
+    height:200px;
+}
             </pre>
         </section>
 
         <section>
             <h3>border</h3>
             <pre>
-                General border properties:
-                //     width | style |color
-                border: medium dash green 
-                etc...
+General border properties:
+//     width | style |color
+border: medium dash green 
+etc...
             </pre>
             <div>
                 border-width: controls thickness <a
                     href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-width">(More info)</a>
                 <pre>
-                    border-width: thick;
-                    border-width: 11em;
-                    border-width: 4px 1.25em;
+border-width: thick;
+border-width: 11em;
+border-width: 4px 1.25em;
                 </pre>
             </div>
 
             <div>
                 border-color: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-color">(more info)</a>
                 <pre>
-                    border-top-color 
+border-top-color 
                 </pre>
             </div>
 
             <div>
                 border-style: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style">(more info)</a>
                 <pre>
-                    border-style: dashed;
+border-style: dashed;
                 </pre>
             </div>
 
@@ -390,10 +386,10 @@
             <h3>Padding: spacing on the inside of border</h3>
             <div>
                 <pre>
-                    padding: 10px /*for all four sides*/
-                    padding: 5px 10px /*vertical | horizontal*/
-                    padding: 1px 2px 2px /*top | horizontal | bottom*/
-                    padding: 5px 1px 0 2px; /*top | right | bottom | left*/
+padding: 10px /*for all four sides*/
+padding: 5px 10px /*vertical | horizontal*/
+padding: 1px 2px 2px /*top | horizontal | bottom*/
+padding: 5px 1px 0 2px; /*top | right | bottom | left*/
                 </pre>
             </div>
         </section>
@@ -402,12 +398,27 @@
             <h3>Margin: spacing between this element and other elements <a
                     href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin">(more info)</a></h3>
             <pre>
-                margin:auto
-                margin: 1em;
-                margin-top: 1em;
-                margin-bottom: 0; 
+margin:auto
+margin: 1em;
+margin-top: 1em;
+margin-bottom: 0; 
             </pre>
             <h4><code>margin:auto</code>can put element in the middle(horizontally</h4>
+        </section>
+
+        <section>
+            <h3>box-sizing</h3>
+            <p>The box-sizing CSS property sets how the total width and height of an element is calculated. Not inherited; needs to be set for individual elements.<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing">More info</a></p>
+            <div>
+                <code>box-sizing: content-box</code>
+                <p>The default option. Border & padding adds up on width/height</p>
+            </div>
+            <div>
+                <code>box-sizing: border-box</code>
+                <p>
+                    border and padding are <span class="bold">included</span> in the total width/height. Very convinient when using % height/width
+                </p>
+            </div>
         </section>
     </section>
 
@@ -418,7 +429,7 @@
             <h3>Inline</h3>
             <div>
                 <pre>
-                    display: inline;
+display: inline;
                 </pre>
                 Makes this element an inline element. Their width and height will become auto. However, it might still
                 NOT be able to fit in a line with other elements as <span class="bold">its parent/child might be
@@ -443,7 +454,7 @@
             <h3>block</h3>
             <div>
                 <pre>
-                    display: block;
+display: block;
                 </pre>
                 Block element takes up a whole line! Note that "a whole line" is<span class="bold"> relative to the
                     parent</span>, NOT the window
@@ -521,6 +532,9 @@
                 <h3>
                     Sticky
                 </h3>
+                <div class="text">
+                    The element is positioned according to the normal flow of the document, and then offset relative to its nearest scrolling ancestor and containing block (nearest block-level ancestor), including table-related elements, based on the values of top, right, bottom, and left. The offset does not affect the position of any other elements.
+                </div>
 
             </section>
         </div>
@@ -562,7 +576,7 @@
     <section>
         <h2>Transition</h2>
         <div class="light-border">
-            <p>adding <code>transition: 1s</code> to the element makes <span class="bold">all transitions of this
+            <p>adding <code>transition: 3s</code> to the element makes <span class="bold">all transitions of this
                     element last 3 second</span> </p>
             <div class="circle">hover!</div>
             <p>Some other cool demo(If u want this effect, better use transform!):</p>
@@ -577,7 +591,8 @@
             <div class="circle bcg">hover!</div>
             <p>Now only the background-color will take 3s to transit, not the shape.</p>
             <p>Multiple transition properties can be specified together. eg:
-                <code>transition: background-color 3s, border-radius 1s;</code> </p>
+                <code>transition: background-color 3s, border-radius 1s;</code>
+            </p>
         </div>
 
         <div class="light-border">
@@ -594,7 +609,8 @@
     <section>
         <h2>Transform</h2>
         <p><code> Transform-origin</code> changes the point the element is, eg, rotating around. Eg:
-            <code>transform-origin: bottom right;</code></p>
+            <code>transform-origin: bottom right;</code>
+        </p>
         <div class="transf">
             <div>transform: rotate(45deg) <a
                     href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function#:~:text=z%3D0%20plane.-,Rotation,-rotate()">For
@@ -663,31 +679,563 @@
 
         <div>
             <h3>flex-direction</h3>
+            <div>
+                <div class="flex-d">
+                    <code>flex-direction: row;</code>
+                    <div style="flex-direction: row;" class="light-border">
+
+                        <div class="flex1">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3">3</div>
+                    </div>
+                </div>
+                <div class="flex-d">
+                    <code>flex-direction: row-reverse</code>
+                    <div style="flex-direction: row-reverse;" class="light-border">
+
+                        <div class="flex1">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3">3</div>
+                    </div>
+                </div>
+                <div class="flex-d">
+                    <code>flex-direction: column;</code><br>
+                    <span class="bold">
+                        Notice how it is being compressed due to the shortage of space!
+                    </span>
+                    <div style="flex-direction: column;" class="light-border">
+
+                        <div class="flex1">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3">3</div>
+                    </div>
+                </div>
+                <div class="flex-d">
+                    <code>flex-direction: column-reverse;</code>
+                    <div style="flex-direction: column-reverse;" class="light-border">
+
+                        <div class="flex1">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3">3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3>justify-content</h3>
+            <div>
+                <div class="flex-d">
+                    <code>justify-content: flex-start (The default)</code>
+
+                    <div style="justify-content: flex-start;" class="light-border">
+
+                        <div class="flex1">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3">3</div>
+                    </div>
+                </div>
+                <div class="flex-d">
+                    <code>justify-content: flex-end;</code>
+
+                    <div style="justify-content: flex-end;" class="light-border">
+
+                        <div class="flex1">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3">3</div>
+                    </div>
+                </div>
+                <div class="flex-d">
+                    <code>justify-content: center;</code>
+                    <div style="justify-content: center;" class="light-border">
+
+                        <div class="flex1">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3">3</div>
+                    </div>
+                </div>
+                <div class="flex-d">
+                    <code>justify-content: space-between;</code>
+                    <div style="justify-content: space-between;" class="light-border">
+
+                        <div class="flex1">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3">3</div>
+                    </div>
+                </div>
+                <div class="flex-d">
+                    <code>justify-content: space-around;</code>
+                    <div style="justify-content: space-around;" class="light-border">
+
+                        <div class="flex1">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3">3</div>
+                    </div>
+                </div>
+                <div class="flex-d">
+                    <code>justify-content: space-evenly;</code>
+                    <div style="justify-content: space-evenly;" class="light-border">
+
+                        <div class="flex1">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3">3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3>flex-wrap</h3>
+            <p>
+                Wrap changes line for the elements. <br>
+                eg1:
+            </p>
+            <div>
+                <div class="flex-d">
+                    <code>flex-wrap: nowrap;</code>
+
+                    <div class="light-border" style="flex-wrap: nowrap;">
+                        <div class="flex1">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3">3</div>
+                        <div class="flex2">4</div>
+                        <div class="flex1">5</div>
+                        <div class="flex3">6</div>
+                        <div class="flex2">7</div>
+                    </div>
+                </div>
+                <div class="flex-d">
+                    <code>flex-wrap: wrap;</code>
+
+                    <div class="light-border" style="flex-wrap: wrap;">
+                        <div class="flex1">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3">3</div>
+                        <div class="flex2">4</div>
+                        <div class="flex1">5</div>
+                        <div class="flex3">6</div>
+                        <div class="flex2">7</div>
+                    </div>
+                </div>
+                <div class="flex-d">
+                    <code>flex-wrap: wrap-reverse;</code>
+
+                    <div class="light-border" style="flex-wrap: wrap-reverse;">
+                        <div class="flex1">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3">3</div>
+                        <div class="flex2">4</div>
+                        <div class="flex1">5</div>
+                        <div class="flex3">6</div>
+                        <div class="flex2">7</div>
+                    </div>
+                </div>
+            </div>
+            <div>Works with <code>flex-direction:column</code> as well</div>
             <div class="flex-d">
-                <div style="flex-direction: row;" class="light-border">
-                    flex-direction: row;
+                <code>flex-wrap: wrap; flex-direction:column;</code>
+
+                <div class="light-border" style="flex-wrap: wrap; flex-direction:column;">
                     <div class="flex1">1</div>
                     <div class="flex2">2</div>
                     <div class="flex3">3</div>
+                    <div class="flex2">4</div>
+                    <div class="flex1">5</div>
+                    <div class="flex3">6</div>
+                    <div class="flex2">7</div>
                 </div>
-                <div style="flex-direction: row-reverse;" class="light-border">
-                    flex-direction: row-reverse
-                    <div class="flex1">1</div>
-                    <div class="flex2">2</div>
-                    <div class="flex3">3</div>
+            </div>
+        </div>
+
+        <div>
+            <h3>align-items</h3>
+            <p>Works on the cross axis(vertical) of flexbox.</p>
+            <div>
+                <div class="flex-d">
+                    <code>align-items: flex-start;</code>(default)
+                    <div class="light-border">
+
+                        <div class="flex1" style="height: 70px;">1</div>
+                        <div class="flex2" style="height: 20px;">2</div>
+                        <div class="flex3" style="height: 90px;">3</div>
+                    </div>
                 </div>
-                <div style="flex-direction: column;" class="light-border">
-                    flex-direction: column;
-                    <div class="flex1">1</div>
-                    <div class="flex2">2</div>
-                    <div class="flex3">3</div>
+                <div class="flex-d">
+                    <code>align-items: flex-end;</code>
+                    <div style="align-items: flex-end;" class="light-border">
+
+                        <div class="flex1" style="height: 70px;">1</div>
+                        <div class="flex2" style="height: 20px;">2</div>
+                        <div class="flex3" style="height: 90px;">3</div>
+                    </div>
                 </div>
-                <div style="flex-direction: column-reverse;" class="light-border">
-                    flex-direction: column-reverse;
-                    <div class="flex1">1</div>
-                    <div class="flex2">2</div>
-                    <div class="flex3">3</div>
+                <div class="flex-d">
+                    <code>align-items: center;</code>(still on center when height is changed!)
+                    <div style="align-items: center;" class="light-border">
+
+                        <div class="flex1" style="height: 70px;">1</div>
+                        <div class="flex2" style="height: 20px;">2</div>
+                        <div class="flex3" style="height: 90px;">3</div>
+                    </div>
                 </div>
+                <div class="flex-d">
+                    <code>align-items: baseline;</code>their flex container baseline align. eg, flexbox 1 and 2
+                    accomadates 3 so that their baseline align.
+                    <div style="align-items: baseline;" class="light-border">
+
+                        <div class="flex1" style="height: 70px;">1</div>
+                        <div class="flex2" style="height: 20px;">2</div>
+                        <div class="flex3" style="height: 90px; font-size: 2em;">3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h3>align-content</h3>
+            <p>Only works when <code>flex-wrap:wrap</code> or wrap reverse <br>
+                similar to <code>justify-content</code> but only works on the seperation between rows(or columns) that
+                are formed by wrap
+            </p>
+            <div>
+                <div class="flex-d">
+                    <code>align-content: center;</code>(+ wrap)
+                    <div class="light-border" style="flex-wrap: wrap; align-content: center;">
+                        <div class="flex1">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3">3</div>
+                        <div class="flex2">4</div>
+                        <div class="flex1">5</div>
+                        <div class="flex3">6</div>
+                        <div class="flex2">7</div>
+                    </div>
+                </div>
+                <div class="flex-d">
+                    <code>align-content: space-between;</code>(+ wrap)
+                    <div class="light-border" style="flex-wrap: wrap; align-content: space-between;">
+                        <div class="flex1">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3">3</div>
+                        <div class="flex2">4</div>
+                        <div class="flex1">5</div>
+                        <div class="flex3">6</div>
+                        <div class="flex2">7</div>
+                    </div>
+                </div>
+                <div class="flex-d">
+                    <code>align-content: space-around;</code>(+ wrap)
+                    <div class="light-border" style="flex-wrap: wrap; align-content: space-around;">
+                        <div class="flex1">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3">3</div>
+                        <div class="flex2">4</div>
+                        <div class="flex1">5</div>
+                        <div class="flex3">6</div>
+                        <div class="flex2">7</div>
+                    </div>
+                </div>
+                <div class="flex-d">
+                    <code>align-content: center;</code>(+ wrap)
+                    <div class="light-border" style="flex-wrap: wrap; align-content: center; flex-direction: column;">
+                        <div class="flex1">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3">3</div>
+                        <div class="flex2">4</div>
+                        <div class="flex1">5</div>
+                        <div class="flex3">6</div>
+                        <div class="flex2">7</div>
+                    </div>
+                </div>
+                <div class="flex-d">
+                    <code>align-content: space-between;</code>(+ wrap)
+                    <div class="light-border"
+                        style="flex-wrap: wrap; align-content: space-between; flex-direction: column;">
+                        <div class="flex1">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3">3</div>
+                        <div class="flex2">4</div>
+                        <div class="flex1">5</div>
+                        <div class="flex3">6</div>
+                        <div class="flex2">7</div>
+                    </div>
+                </div>
+                <div class="flex-d">
+                    <code>align-content: space-around;</code>(+ wrap)
+                    <div class="light-border"
+                        style="flex-wrap: wrap; align-content: space-around; flex-direction: column;">
+                        <div class="flex1">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3">3</div>
+                        <div class="flex2">4</div>
+                        <div class="flex1">5</div>
+                        <div class="flex3">6</div>
+                        <div class="flex2">7</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h3>align-self</h3>
+            <p>similar to <code>align-items</code>, but is <span class="bold">applied on the individual element</span>,
+                is NOT applied to the flex container.</p>
+            <div>
+                <div class="flex-d">
+                    <code>align-self:center; align-self:end;</code>
+                    <div style="flex-direction: row;" class="light-border">
+
+                        <div class="flex1" style="align-self:center;">1</div>
+                        <div class="flex2" style="align-self:end;">2</div>
+                        <div class="flex3">3</div>
+                    </div>
+                </div>
+                <div class="flex-d">
+                    <code>flex-direction:column; align-self:center; align-self:end;</code>
+                    <div style="flex-direction:column;" class="light-border">
+
+                        <div class="flex1" style="align-self:center;">1</div>
+                        <div class="flex2" style="align-self:end;">2</div>
+                        <div class="flex3">3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h3>flex-basis</h3>
+            <p>Defines the initial size of an element when added into the flex box. Can be width/height <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis">Read more</a></p>
+            <div></div>
+        </div>
+
+        <div>
+            <h3>flex-grow</h3>
+            <p>Controls the amount of avaliable space an element should take up.<a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow">Read more</a>
+                <br> flex-grow make elements take up the remaining spaces.
+            </p>
+            <div>
+                <div class="flex-d">
+                    <code>default</code>
+                    <div class="light-border">
+
+                        <div class="flex1">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3">3</div>
+                    </div>
+                </div>
+                <div class="flex-d">
+                    <code>flex-grow:1;(for box 1)</code>
+                    <div class="light-border">
+
+                        <div class="flex1" style="flex-grow: 1;">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3">3</div>
+                    </div>
+                </div>
+                <div class="flex-d">
+                    <code>flex-grow:1;(for box 1) flex-grow:2; (for box 3)</code>
+                    <div class="light-border">
+
+                        <div class="flex1" style="flex-grow: 1;">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3" style="flex-grow: 2;">3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h3>flex-shrink</h3>
+            <p>If items are larger than the container, they shrink according to flex-shrink <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink">Read more</a>
+                <br>it's the shrink version of flex-grow. Larger the number, greater the shrink.
+            </p>
+            <div class="flex-basis">
+                <div class="flex-d">
+                    <code>default (flex-basis:200px)</code>
+                    <div class="light-border">
+
+                        <div class="flex1">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3">3</div>
+                    </div>
+                </div>
+                <div class="flex-d">
+                    <code>flex-shrink:2;(for box 1)</code>
+                    <div class="light-border">
+
+                        <div class="flex1" style="flex-shrink: 2;">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3">3</div>
+                    </div>
+                </div>
+                <div class="flex-d">
+                    <code>flex-shrink: 2;(for box 1) flex-shrink: 4; (for box 3)</code>
+                    <div class="light-border">
+
+                        <div class="flex1" style="flex-shrink: 2;">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3" style="flex-shrink: 4;">3</div>
+                    </div>
+                </div>
+                <div class="flex-d">
+                    <code>flex-shrink: 0;(for box 1)</code>It will not shrink.
+                    <div class="light-border">
+
+                        <div class="flex1" style="flex-shrink: 0;">1</div>
+                        <div class="flex2">2</div>
+                        <div class="flex3">3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h3>flex shorthand</h3>
+            <p>/* Three values: flex-grow | flex-shrink | flex-basis */ <br>
+                flex: 2 2 10%; <br>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex">more info</a>
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>@Media</h2>
+        <p>One of the CSS At-rules. <br>
+            @media is a conditional group rule that will apply its content if the device meets the criteria of the
+            condition defined using a media query.
+        </p>
+        <div>
+            <h3>At-rule structures</h3>
+            <div>
+                <h4>Basic structure:</h4>
+                <pre>
+/* General structure */ 
+@IDENTIFIER (RULE);
+                </pre>
+            </div>
+            <div>
+                <h4>Nested structure:</h4>
+                <pre>
+@IDENTIFIER (RULE) {
+
+}  
+                </pre>
+            </div>
+        </div>
+
+        <div>
+            <h3>Media queries and usage</h3>
+            <p>There are three parts to media query: media types(optional), media features and logical
+                operator(optional). <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">More
+                    info</a></p>
+            <div>
+                <h4>Media types</h4>
+                <p>
+                    describe the general category of a device. Is optional. <br>
+
+                    <code>all</code> <br>
+                    Suitable for all devices. <br>
+
+                    <code>print</code> <br>
+                    Intended for paged material and documents viewed on a screen in print preview mode. (Please see
+                    paged media for information about formatting issues that are specific to these formats.) <br>
+
+                    <code>screen</code> <br>
+                    Intended primarily for screens.
+                </p>
+            </div>
+
+            <div>
+                <h4>Media features</h4>
+                <div>
+                    <code>width</code>
+                    <p>
+                        Width of the viewport.
+                    </p>
+
+                </div>
+
+                <div>
+                    <code>height</code>
+                    <p>
+                        Height of the viewport.
+                    </p>
+
+                </div>
+
+                <div>
+                    <code>orientation</code>
+                    <p>
+                        Orientation of the viewport. Portrait and landscape
+                    </p>
+
+                </div>
+
+                <div>
+                    color, hover, aspect-ratio, overflow-block, overflow-inline, resolution, pointer... <br>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_types">More media
+                        features</a>
+                </div>
+            </div>
+
+            <div>
+                <h4>Logical operator</h4>
+                <div>
+                    <code>and</code>
+                    <p>
+                        Requires both features to be true.
+                    </p>
+                </div>
+
+                <div>
+                    <code>not</code>
+                    <p>
+                        Negates a media query.
+                    </p>
+
+                </div>
+
+                <div>
+                    <code>only</code>
+
+                    <p>
+                        Applies a style only if an entire query matches. <br>
+                        It is useful for preventing older browsers from applying selected styles. <br>
+                        When not using <code>only</code>, older browsers would interpret the query
+                        <code>screen and (max-width: 500px)</code> as <code>screen</code>, ignoring the remainder of the
+                        query, and applying its styles on all screens. <br>
+                        If you use the <code>only</code> operator, you <em>must also</em> specify a media type.
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <h4>How to use?</h4>
+                <pre>
+@media (media query) {
+    (selector) {
+        (style);
+    }
+}
+                </pre>
+                For example:
+
+                <pre>
+@media (max-width: 800px) {
+    #media-example {
+        color: red;
+    }
+}
+                </pre>
+
+                <div id="media-example" class="light-border">
+                    (id: media-example)
+                </div>
+                <p>
+                    Text above will be red when (max-width: 800px) is TRUE, in another word, the width of viewport is
+                    smaller than 800px
+                </p>
             </div>
         </div>
     </section>
@@ -698,13 +1246,13 @@
             selectors that come later overrides selectors that comes before
             <div>eg:
                 <pre>
-                    .color-contest {
-                        color: red;
-                    }
+.color-contest {
+    color: red;
+}
 
-                    .color-contest {
-                        color:purple;
-                    }
+.color-contest {
+    color:purple;
+}
                 </pre>
                 <div class="color-contest">
                     Purple wins.
@@ -721,13 +1269,13 @@
             But some elements(eg, button, input) does not inherit by default. This can be changed by setting the style
             to "inherit."
             <pre>
-                form {
-                    color: green;
-                }
+form {
+    color: green;
+}
 
-                button, input {
-                    color: inherit;
-                }
+button, input {
+    color: inherit;
+}
             </pre>
             Now buttons and inputs inside of a form element will inherit the color:green property.
             <br> <br>
@@ -770,6 +1318,8 @@
         </div>
     </section>
 
+</div>
+    
 </body>
 
 </html>
